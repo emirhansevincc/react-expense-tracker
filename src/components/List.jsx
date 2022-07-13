@@ -1,14 +1,16 @@
 import React from 'react'
 
-function List() {
+function List({ activity }) {
+
+    const sign = activity.amount < 0 ? '-' : '+';
 
   return (
     <div>
-        <li className="minus">
+        <li className={activity.amount < 0 ? 'minus' : 'plus'}>
           <div className='li-flex'>
-            <div className='li-text'>text</div> 
+            <div className='li-text'>{activity.text}</div> 
             <div>
-              <span className='li-span'>$0.00</span>
+              <span className='li-span'>{sign}${Math.abs(activity.amount)}</span>
               <button className="delete-button">x</button>
             </div>
           </div>

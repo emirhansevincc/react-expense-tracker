@@ -5,10 +5,11 @@ import Header from './components/Header'
 import History from './components/History'
 import IncomeExpense from './components/IncomeExpense'
 
+import GlobalContextProvider from "./context/GlobalContext";
+
 function App() {
   return (
-    <div>
-
+    <GlobalContextProvider>
       <Header />
       <div className="container">
         <div className="top-part">
@@ -20,7 +21,7 @@ function App() {
         </div>
         <History />
       </div>
-    </div>
+    </GlobalContextProvider>
   );
 }
 
