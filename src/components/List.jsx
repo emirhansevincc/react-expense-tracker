@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { GlobalContext } from '../context/GlobalContext';
 
 function List({ activity }) {
 
-    const sign = activity.amount < 0 ? '-' : '+';
+  const sign = activity.amount < 0 ? '-' : '+';
+
+  const { deleteItem } = useContext(GlobalContext)
 
   return (
     <div>
@@ -11,7 +14,9 @@ function List({ activity }) {
             <div className='li-text'>{activity.text}</div> 
             <div>
               <span className='li-span'>{sign}${Math.abs(activity.amount)}</span>
-              <button className="delete-button">x</button>
+              <button className="delete-button" onClick={() => {
+                deleteItem(activity.id)
+              }}>x</button>
             </div>
           </div>
         </li>

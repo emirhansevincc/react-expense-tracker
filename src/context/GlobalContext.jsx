@@ -20,9 +20,13 @@ function GlobalContextProvider({ children }) {
         }])
     }
 
+    const deleteItem = (id) => {
+        setActivities(activities.filter(item => item.id !== id))
+    }
+
   return (
     <div>
-        <GlobalContext.Provider value={{activities, addItem}}>
+        <GlobalContext.Provider value={{activities, addItem, deleteItem}}>
             {children}
         </GlobalContext.Provider>
     </div>
