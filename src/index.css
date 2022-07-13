@@ -1,13 +1,155 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: whitesmoke;
+}
+.header{
+  margin-bottom: 15px;
+  letter-spacing: 5px;
+  text-align: center;
+}
+.container{
+  display: flex;
+}
+.balance-part{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid lightgrey;
+  padding: 20px;
+  min-width: 250px;
+  border-radius: 15px;
+}
+.balance{
+  text-align: center;
+}
+.balance h1{
+  padding: 10px;
+}
+.balance hr{
+  margin-bottom: 10px;
+}
+.income-expense{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.income-money{
+  color: rgb(11, 135, 11);
+  font-size: 23px;
+  margin-top: 5px;
+}
+.expense-money{
+  color: rgb(175, 18, 18);
+  font-size: 23px;
+  margin-top: 5px;
+  text-align: center;
+}
+.income{margin: 10px 0;}
+.formPart{
+  padding: 20px;
+  border: 2px solid lightgray;
+  border-radius: 15px;
+  margin: 0 0 0 10px;
+}
+.income h2{text-align: center;}
+.top-part{
+  display: flex;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+}
+.formPart hr{
+  margin: 10px 0 20px 0
+}
+.formText{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.formNumber{
+  display: flex;
+  flex-direction: column;
+}
+input{
+  padding: 8px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+.button{
+  width: 100%;
+  margin-top: 20px;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(102, 205, 102);
+  color: #111;
+  cursor: pointer;
+}
+.button:hover{
+  background-color: rgb(21, 203, 24);
+}
+.history{
+  border: 2px solid lightgray;
+  margin-top: 10px;
+  border-radius: 15px;
+  padding: 20px;
+  height: 240px;
+  overflow: scroll;
+}
+.history h2{margin-bottom: 10px;}
+.history hr{margin-bottom: 10px;}
+.history li{
+  list-style-type: none;
+  padding: 7px;
+  background-color: #fff;
+  margin-top: 10px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+}
+.li-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.li-span{
+  margin-right: 20px;
+  font-weight: 600;
+  font-size: 18px;
+}
+.delete-button{
+  padding: 3px 5px;
+  margin-right: 5px;
+  background-color: transparent;
+  border: 1px solid gray;
+  border-radius: 10px;
+  cursor: pointer;
+}
+li.minus{ 
+  border-bottom: 2px solid red;
+}
+li.minus:hover{
+  border-bottom: 2px solid rgb(224, 126, 126);
+}
+li.plus{
+  border-bottom: 2px solid green;
+}
+li.plus:hover{
+  border-bottom: 2px solid rgb(121, 219, 132);
+}
+.red{
+  color: red;
+}
+.green{
+  color: rgb(7, 181, 7);
 }
