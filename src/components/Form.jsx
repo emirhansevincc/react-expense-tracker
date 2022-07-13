@@ -1,12 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { GlobalContext } from '../context/GlobalContext'
 
 function Form() {
 
     const [inputValue, setInputValue] = useState("")
     const [amount, setAmount] = useState(0)
+
+    const { addItem } = useContext(GlobalContext)
     
     const handleSubmit = (e) => {
-      e.preventDefault()
+        e.preventDefault()
+        addItem(inputValue, amount)
+        setInputValue("")
+        setAmount(0)
     }
   
     return (

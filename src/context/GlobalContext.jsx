@@ -12,10 +12,17 @@ function GlobalContextProvider({ children }) {
         { id: uuidv4(), text: 'Investment', amount: 1500 }
     ])
 
+    const addItem = (inputValue, amount) => {
+        setActivities([...activities, {
+            id: uuidv4(),
+            text: inputValue,
+            amount: +amount
+        }])
+    }
 
   return (
     <div>
-        <GlobalContext.Provider value={{activities}}>
+        <GlobalContext.Provider value={{activities, addItem}}>
             {children}
         </GlobalContext.Provider>
     </div>
