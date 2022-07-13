@@ -7,21 +7,27 @@ import IncomeExpense from './components/IncomeExpense'
 
 import GlobalContextProvider from "./context/GlobalContext";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"
+
 function App() {
   return (
-    <GlobalContextProvider>
-      <Header />
-      <div className="container">
-        <div className="top-part">
-          <div className="balance-part">
-            <Balance />
-            <IncomeExpense />
+    <>
+      <ToastContainer />
+      <GlobalContextProvider>
+        <Header />
+        <div className="container">
+          <div className="top-part">
+            <div className="balance-part">
+              <Balance />
+              <IncomeExpense />
+            </div>
+            <Form />
           </div>
-          <Form />
+          <History />
         </div>
-        <History />
-      </div>
-    </GlobalContextProvider>
+      </GlobalContextProvider>
+    </>
   );
 }
 

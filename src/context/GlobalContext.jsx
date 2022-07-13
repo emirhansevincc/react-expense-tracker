@@ -1,5 +1,6 @@
 import React, { createContext, useState } from 'react'
 import { v4 as uuidv4} from 'uuid'
+import { toast } from 'react-toastify'
 
 export const GlobalContext = createContext()
 
@@ -22,6 +23,7 @@ function GlobalContextProvider({ children }) {
 
     const deleteItem = (id) => {
         setActivities(activities.filter(item => item.id !== id))
+        toast.error("Deleted")
     }
 
   return (

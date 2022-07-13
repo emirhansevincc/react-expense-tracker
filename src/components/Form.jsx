@@ -1,6 +1,8 @@
 import React, { useState, useContext } from 'react'
 import { GlobalContext } from '../context/GlobalContext'
 
+import { toast } from 'react-toastify'
+
 function Form() {
 
     const [inputValue, setInputValue] = useState("")
@@ -13,6 +15,7 @@ function Form() {
         addItem(inputValue, amount)
         setInputValue("")
         setAmount(0)
+        toast.success("Added")
     }
   
     return (
